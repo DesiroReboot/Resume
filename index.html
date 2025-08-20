@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>潘嘉阳 - 个人简历</title>
+    <link rel="stylesheet" href="web/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部信息 -->
+        <header class="header">
+            <div class="header-content">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img id="profile-photo" src="web/images/resume.png" alt="证件照" class="profile-img">
+                        <div class="upload-overlay">
+                            <!-- <label for="photo-upload" class="upload-label">
+                                <span class="upload-text">点击上传</span>
+                                <span class="upload-hint">支持JPG、PNG格式</span>
+                            </label> -->
+                            <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+                        </div>
+                    </div>
+                    <div class="name-section">
+                        <h1 class="name">潘嘉阳</h1>
+                        <div class="contact-info">
+                            <span class="phone">（+86）137-7783-8791</span>
+                            <span class="separator">｜</span>
+                            <a href="mailto:desirojob@163.com" class="email">desirojob@163.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 教育背景 -->
+        <section class="education">
+            <h2>教育背景</h2>
+            <div class="edu-item">
+                <h3><strong>西交利物浦大学</strong> - 硕士 - 应用信息学 (2023.09-2025.04)</h3>
+                <p>专业排名前<strong>20%</strong>，在<strong>信息安全，软件架构，OOP设计理论，大数据</strong>等达到或接近Dissertation优秀（70%）</p>
+            </div>
+            <div class="edu-item">
+                <h3><strong>杭州电子科技大学</strong> - 本科 - 计算机科学与技术 - 卓越学院（2018.09-2022.07）</h3>
+            </div>
+        </section>
+
+        <!-- 技能按钮区域 -->
+        <section class="skills-section">
+            <div class="skills-buttons">
+                <button class="skill-btn active" data-skill="development">开发</button>
+                <button class="skill-btn" data-skill="ai">AI</button>
+                <button class="skill-btn" data-skill="hardware">硬件</button>
+                <button class="skill-btn" data-skill="english">英语</button>
+            </div>
+        </section>
+
+        <!-- 技能内容区域 -->
+        <section class="skills-content">
+            <!-- 开发技能 -->
+            <div class="skill-content active" id="development">
+                <h2>开发</h2>
+                <div class="experience-item">
+                    <h3><strong>安徽聚合微电子有限公司</strong> - 制造部 - （2025.07-2025.08）</h3>
+                    <ul>
+                        <li>开发报表：主动了解并收集生产部门需求，借助<strong>Oracle</strong>DB,<strong>FineReport</strong>平台开发BI报表，获得"数据敏感"高评价。</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3><strong>宁波颐博科技有限公司</strong> - 软件部开发 - （2024.06-2024.08）</h3>
+                    <p>入职<strong>宁波港信息通信公司</strong>实习</p>
+                    <ul>
+                        <li>设计中间件：使用<strong>Kafka</strong>的<strong>Topic 分离</strong>，<strong>分区定向</strong>和<strong>消费者组</strong>隔离，仿照TCP三次握手，<strong>设计并维护</strong>一套吊机-调度系统通信机制，实现调度和吊机间消息可靠传递。</li>
+                        <li>设计框架：开发基于时间窗口的批量处理框架，实现任务聚合后<strong>批量</strong>写入<strong>Redis</strong>，降低<strong>网络往返</strong>时间至处理前<strong>10%</strong>。</li>
+                        <li>维护队列：使用阿里云ARMS,实现性能实时监控，异常定位查找，性能数据可视化。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AI技能 -->
+            <div class="skill-content" id="ai">
+                <h2>AI</h2>
+                <div class="experience-item">
+                    <h3><strong>安徽聚合微电子有限公司</strong> - 制造部 - （2025.07-2025.08）</h3>
+                    <div class="highlight">
+                        <strong>HBM先进封装厂-AI芯片</strong>
+                    </div>
+                    <ul>
+                        <li>搭建AI Agent：在集训中，使用<strong>coze</strong>平台，带领6人攻关团队，在极短时间（<8小时）内完成"工厂SOP机器人"搭建，获得<strong>MVP</strong>奖。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 硬件技能 -->
+            <div class="skill-content" id="hardware">
+                <h2>硬件</h2>
+                <div class="experience-item">
+                    <h3><strong>安徽聚合微电子有限公司</strong> - 制造部 - （2025.07-2025.08）</h3>
+                    <div class="highlight">
+                        <strong>HBM先进封装厂-AI芯片</strong>
+                    </div>
+                    <ul>
+                        <li>学习硬件知识：学习HBM/LDDB process flow等，获得"勤学好问，成长快"高评价。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 英语技能 -->
+            <div class="skill-content" id="english">
+                <h2>英语</h2>
+                <ul>
+                    <li>全英授课：<strong>西交利物浦大学</strong> - 硕士 - 应用信息学 (2023.09-2025.04)</li>
+                    <li>考试成绩：六级585（2021）-雅思7.5（2023）；英语可做工作语言。</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script src="web/script.js"></script>
+</body>
+</html>
