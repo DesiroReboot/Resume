@@ -1,0 +1,355 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* 头部样式 */
+.header {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 3px solid #667eea;
+    margin-bottom: 30px;
+}
+
+.name {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.contact-info .separator {
+    margin: 0 15px;
+    color: #667eea;
+    font-weight: bold;
+}
+
+.email {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.email:hover {
+    color: #5a6fd8;
+    text-decoration: underline;
+}
+
+/* 教育背景样式 */
+.education {
+    margin-bottom: 30px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
+}
+
+.education h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.edu-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.edu-item h3 {
+    font-size: 1.3rem;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.edu-item p {
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* 技能按钮区域 */
+.skills-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.skills-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-btn {
+    padding: 18px 40px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    min-width: 120px;
+}
+
+.skill-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.skill-btn:hover::before {
+    left: 100%;
+}
+
+/* 开发按钮 */
+.skill-btn[data-skill="development"] {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+.skill-btn[data-skill="development"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
+}
+
+/* AI按钮 */
+.skill-btn[data-skill="ai"] {
+    background: linear-gradient(45deg, #FF6B6B, #ee5a52);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.skill-btn[data-skill="ai"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+}
+
+/* 硬件按钮 */
+.skill-btn[data-skill="hardware"] {
+    background: linear-gradient(45deg, #4ECDC4, #44a08d);
+    color: white;
+    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.4);
+}
+
+.skill-btn[data-skill="hardware"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(78, 205, 196, 0.6);
+}
+
+/* 英语按钮 */
+.skill-btn[data-skill="english"] {
+    background: linear-gradient(45deg, #9B59B6, #8e44ad);
+    color: white;
+    box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4);
+}
+
+.skill-btn[data-skill="english"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(155, 89, 182, 0.6);
+}
+
+/* 激活状态 */
+.skill-btn.active {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* 技能内容区域 */
+.skills-content {
+    min-height: 400px;
+}
+
+.skill-content {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
+}
+
+.skill-content.active {
+    display: block;
+}
+
+.skill-content h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+.experience-item {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #667eea;
+}
+
+.experience-item h3 {
+    font-size: 1.3rem;
+    color: #34495e;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.experience-item p {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.experience-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-item li {
+    padding: 8px 0;
+    color: #555;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 25px;
+}
+
+.experience-item li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* 高亮内容 */
+.highlight {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 15px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    border: 2px solid #FFD700;
+}
+
+/* 英语技能特殊样式 */
+#english ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#english li {
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #9B59B6;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .name {
+        font-size: 2.5rem;
+    }
+    
+    .skills-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skill-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .contact-info .separator {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 2rem;
+    }
+    
+    .skill-content {
+        padding: 20px 15px;
+    }
+    
+    .experience-item {
+        padding: 15px;
+    }
+}
