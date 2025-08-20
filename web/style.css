@@ -32,7 +32,87 @@ body {
     margin-bottom: 20px;
 }
 
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-left: 20px;
+}
+
+.profile-image {
+    flex-shrink: 0;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid #667eea;
+}
+
+.profile-img {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.upload-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(102, 126, 234, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.profile-image:hover .upload-overlay {
+    opacity: 1;
+}
+
+.upload-label {
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.upload-text {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.upload-hint {
+    display: block;
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.name-section {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .name {
     font-size: 3.5rem;
@@ -318,6 +398,20 @@ body {
         padding: 15px;
     }
     
+    .profile-section {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .profile-image {
+        order: -1; /* 在移动端让图片显示在上方 */
+    }
+    
+    .name-section {
+        min-width: auto;
+    }
+    
     .name {
         font-size: 2.5rem;
     }
@@ -345,6 +439,11 @@ body {
 @media (max-width: 480px) {
     .name {
         font-size: 2rem;
+    }
+    
+    .profile-img {
+        width: 100px;
+        height: 133px;
     }
     
     .skill-content {
